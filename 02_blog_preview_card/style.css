@@ -19,15 +19,20 @@ body {
   min-height: 100vh;
   background-color: var(--color-yellow);
   font-family: "Figtree", sans-serif;
+  line-height: 2.4rem;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
-  border-radius: 1rem;
   max-width: 38.4rem;
   border-radius: 2rem;
   padding: 2.4rem;
+  gap: 2.4rem;
+  border: solid var(--color-gray-950) 1px;
   text-align: center;
+  box-shadow: 0.8rem 0.8rem black;
 }
 
 .image {
@@ -39,24 +44,40 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 1rem;
   text-align: left;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .label {
   align-self: flex-start;
   background-color: var(--color-yellow);
   border-radius: 0.4rem;
-  padding: 0.4rem 1.2rem;
-  font-weight: bold;
+  border-style: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 800;
+  font-size: 1.4rem;
   /* font-size: 0.8rem; */
 }
 
+.label:hover {
+  color: var(--color-yellow);
+  background-color: var(--color-gray-950);
+}
+
 .published {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .title {
+  font-size: 2.4rem;
+  height: 3.6rem;
+  font-weight: 800;
+  align-content: center;
+}
+
+.title a:hover {
+  color: var(--color-yellow);
 }
 
 .description {
@@ -66,9 +87,9 @@ body {
 }
 
 .author-container {
-  margin-top: 1rem;
   display: flex;
   align-items: center;
+  gap: 1.2rem;
 }
 
 .icon {
@@ -76,6 +97,10 @@ body {
 }
 
 .name {
-  font-weight: bold;
-  margin-left: 1rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.name:hover {
+  text-decoration: underline 2px;
 }
