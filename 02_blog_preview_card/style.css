@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-yellow: #f4d04e;
+  --color-gray-950: #111111;
+  --color-gray-500: #6b6b6b;
+
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-yellow);
+  font-family: "Figtree", sans-serif;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  max-width: 38.4rem;
+  border-radius: 2rem;
+  padding: 2.4rem;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: left;
+  gap: 1rem;
+}
+
+.label {
+  align-self: flex-start;
+  background-color: var(--color-yellow);
+  border-radius: 0.4rem;
+  padding: 0.4rem 1.2rem;
+  font-weight: bold;
+  /* font-size: 0.8rem; */
+}
+
+.published {
+}
+
+.title {
+}
+
+.description {
+  color: var(--color-gray-500);
+  /* line-height: 1rem; */
+  font-size: 1.6rem;
+}
+
+.author-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 3.2rem;
+}
+
+.name {
+  font-weight: bold;
+  margin-left: 1rem;
+}
