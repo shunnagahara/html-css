@@ -12,6 +12,12 @@
   --white: #ffffff;
   --text-preset1-size: 2.4rem;
   --text-preset2-size: 1.4rem;
+  --spacing500: 4rem;
+  --spacing300: 2.4rem;
+  --spacing200: 1.6rem;
+  --spacing150: 1.2rem;
+  --spacing100: 0.8rem;
+  --spacing50: 0.4rem;
   font-size: 62.5%;
 }
 
@@ -22,7 +28,7 @@ body {
   min-height: 100vh;
   background-color: var(--gray-900);
   font-family: "Inter", sans-serif;
-  line-height: 2.4rem;
+  line-height: var(--spacing300);
 }
 
 .card {
@@ -32,8 +38,8 @@ body {
   align-items: center;
   text-align: center;
   width: 38.4rem;
-  padding: 4rem;
-  gap: 2.4rem;
+  padding: var(--spacing500);
+  gap: var(--spacing300);
   border-radius: 1.2rem;
 }
 
@@ -46,7 +52,7 @@ body {
 .profile {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: var(--spacing50);
   height: 6.1rem;
 }
 
@@ -60,7 +66,7 @@ body {
 .location {
   font-size: var(--text-preset2-size);
   color: #c4f82a;
-  line-height: 2.4rem;
+  line-height: var(--spacing300);
   font-weight: 600;
 }
 
@@ -74,7 +80,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1.6rem;
+  gap: var(--spacing200);
 }
 
 .link {
@@ -83,7 +89,7 @@ body {
   font-size: var(--text-preset2-size);
   background-color: var(--gray-700);
   width: 100%;
-  padding: 1.2rem 1.2rem;
+  padding: var(--spacing150) var(--spacing150);
   border-radius: 0.8rem;
   font-weight: 700;
   transition: background-color 0.8s ease, color 0.8s ease;
@@ -98,6 +104,6 @@ body {
 @media (max-width: 480px) {
   .card {
     width: 32.7rem;
-    padding: 2.4rem;
+    padding: var(--spacing300);
   }
 }
