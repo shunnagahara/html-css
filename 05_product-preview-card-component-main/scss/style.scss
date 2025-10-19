@@ -1,0 +1,23 @@
+// 1. ABSTRACTS
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+// 2. BASE
+@use "base/reset";
+
+// 3. COMPONENTS
+@use "components/card";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 64rem) {
+    min-height: 100vh;
+    padding: 0;
+  }
+}

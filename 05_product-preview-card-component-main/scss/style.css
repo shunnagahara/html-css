@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 62.5%;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.product-card {
+  max-width: 34.3rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 64rem) {
+  .product-card {
+    max-width: 60rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.product-card__image {
+  width: 100%;
+  height: 34.2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+@media (min-width: 64rem) {
+  .product-card__image {
+    height: 100%;
+  }
+}
+.product-card__content {
+  padding: 3.2rem;
+}
+.product-card__category {
+  font-family: "Montserrat", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.5rem;
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+.product-card__title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: hsl(212, 21%, 14%);
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 64rem) {
+  .product-card__title {
+    margin-bottom: 2.4rem;
+  }
+}
+.product-card__description {
+  font-family: "Montserrat", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 64rem) {
+  .product-card__description {
+    margin-bottom: 3.2rem;
+  }
+}
+.product-card__pricing {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 64rem) {
+  .product-card__pricing {
+    margin-bottom: 3.2rem;
+  }
+}
+.product-card__current-price {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1;
+  color: hsl(158, 36%, 37%);
+}
+.product-card__original-price {
+  font-family: "Montserrat", serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+.product-card__button {
+  width: 100%;
+  padding: 1.6rem 0;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.8rem;
+  font-family: "Montserrat", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.product-card__button:hover {
+  background-color: hsl(158, 42%, 18%);
+}
+.product-card__button::before {
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z' fill='%23FFF'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(30, 38%, 92%);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 64rem) {
+  body {
+    min-height: 100vh;
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

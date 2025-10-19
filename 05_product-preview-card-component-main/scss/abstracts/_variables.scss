@@ -1,0 +1,102 @@
+// Primary Colors
+$green-500: hsl(158, 36%, 37%); // #3D8168
+$green-700: hsl(158, 42%, 18%); // #1A4032
+
+// Neutral Colors
+$black: hsl(212, 21%, 14%); // #1C232B
+$grey: hsl(228, 12%, 48%); // #6C7289
+$cream: hsl(30, 38%, 92%); // #F2EAE2
+$white: hsl(0, 0%, 100%); // #FFFFFF
+
+// Semantic Names
+$color-primary: $green-500;
+$color-primary-dark: $green-700;
+$color-text-primary: $black;
+$color-text-secondary: $grey;
+$color-background: $cream;
+$color-surface: $white;
+
+// ==========================================================================
+// TYPOGRAPHY - Product Preview Card Component
+// ==========================================================================
+
+// Font Families
+$font-family-primary: "Fraunces", sans-serif;
+$font-family-accent: "Montserrat", serif;
+
+// Font Weights
+$font-weight-medium: 400;
+$font-weight-bold: 600;
+
+// Font Size System
+$font-size-32: 3.2rem; // 32px
+$font-size-14: 1.4rem; // 14px
+$font-size-13: 1.3rem; // 13px
+$font-size-12: 1.2rem; // 12px
+
+// Line Height System
+$line-height-100: 1; // 100%
+$line-height-110: 1.1; // 110%
+$line-height-120: 1.2; // 120%
+$line-height-160: 1.6; // 160%
+
+// Letter Spacing
+$letter-spacing-none: 0;
+$letter-spacing-wide: 0.5rem; // 5px
+
+// Text Presets (Semantic Names)
+$text-preset-1: (
+  font-family: $font-family-primary,
+  font-size: $font-size-32,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-100,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-2: (
+  font-family: $font-family-accent,
+  font-size: $font-size-14,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-110,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-3: (
+  font-family: $font-family-accent,
+  font-size: $font-size-14,
+  font-weight: $font-weight-medium,
+  line-height: $line-height-160,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-4: (
+  font-family: $font-family-accent,
+  font-size: $font-size-12,
+  font-weight: $font-weight-medium,
+  line-height: $line-height-120,
+  letter-spacing: $letter-spacing-wide,
+);
+
+$text-preset-5: (
+  font-family: $font-family-accent,
+  font-size: $font-size-13,
+  font-weight: $font-weight-medium,
+  line-height: $line-height-120,
+  letter-spacing: $letter-spacing-none,
+);
+
+// Spacing Scale                                                                                         │ │
+$spacing-50: 0.4rem; // 4px                                                                          │ │
+$spacing-100: 0.8rem; // 8px                                                                          │ │
+$spacing-200: 1.6rem; // 16px                                                                         │ │
+$spacing-300: 2.4rem; // 24px                                                                         │ │
+$spacing-400: 3.2rem; // 32px                                                                         │ │
+$spacing-500: 4rem; // 40px
+
+// Semantic Spacing Names
+$spacing-xs: $spacing-50; // 4px
+$spacing-sm: $spacing-100; // 8px
+$spacing-md: $spacing-200; // 16px
+$spacing-lg: $spacing-300; // 24px
+$spacing-xl: $spacing-400; // 32px
+$spacing-xxl: $spacing-500; // 40px
