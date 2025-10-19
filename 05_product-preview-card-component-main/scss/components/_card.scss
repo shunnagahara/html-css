@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .product-card {
   max-width: 34.3rem;
@@ -28,22 +29,14 @@
   }
 
   &__category {
-    font-family: map-get($text-preset-4, font-family);
-    font-size: map-get($text-preset-4, font-size);
-    font-weight: map-get($text-preset-4, font-weight);
-    line-height: map-get($text-preset-4, line-height);
-    letter-spacing: map-get($text-preset-4, letter-spacing);
+    @include apply-typography($text-preset-4);
     color: $color-text-secondary;
     text-transform: uppercase;
     margin-bottom: $spacing-300;
   }
 
   &__title {
-    font-family: map-get($text-preset-1, font-family);
-    font-size: map-get($text-preset-1, font-size);
-    font-weight: map-get($text-preset-1, font-weight);
-    line-height: map-get($text-preset-1, line-height);
-    letter-spacing: map-get($text-preset-1, letter-spacing);
+    @include apply-typography($text-preset-1);
     color: $color-text-primary;
     margin-bottom: $spacing-300;
 
@@ -53,11 +46,7 @@
   }
 
   &__description {
-    font-family: map-get($text-preset-3, font-family);
-    font-size: map-get($text-preset-3, font-size);
-    font-weight: map-get($text-preset-3, font-weight);
-    line-height: map-get($text-preset-3, line-height);
-    letter-spacing: map-get($text-preset-3, letter-spacing);
+    @include apply-typography($text-preset-3);
     color: $color-text-secondary;
     margin-bottom: $spacing-300;
     @media (min-width: 64rem) {
@@ -77,32 +66,24 @@
   }
 
   &__current-price {
-    font-family: map-get($text-preset-1, font-family);
-    font-size: map-get($text-preset-1, font-size);
-    font-weight: map-get($text-preset-1, font-weight);
-    line-height: map-get($text-preset-1, line-height);
+    @include apply-typography($text-preset-1);
     color: $color-primary;
   }
 
   &__original-price {
-    font-family: map-get($text-preset-5, font-family);
-    font-size: map-get($text-preset-5, font-size);
-    font-weight: map-get($text-preset-5, font-weight);
-    line-height: map-get($text-preset-5, line-height);
+    @include apply-typography($text-preset-5);
     color: $color-text-secondary;
     text-decoration: line-through;
   }
 
   &__button {
+    @include apply-typography($text-preset-2);
     width: 100%;
     padding: $spacing-200 0;
     background-color: $color-primary;
     color: $color-surface;
     border: none;
     border-radius: 0.8rem;
-    font-family: map-get($text-preset-2, font-family);
-    font-size: map-get($text-preset-2, font-size);
-    font-weight: map-get($text-preset-2, font-weight);
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: flex;
