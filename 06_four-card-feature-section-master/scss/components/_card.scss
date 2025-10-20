@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.card {
+  background-color: $color-surface;
+  border-radius: 0.8rem;
+  border-top: 0.4rem solid transparent;
+  padding: $spacing-xl;
+  box-shadow: 0 1.5rem 3rem rgba(131, 166, 210, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: 576px) and (max-width: 1023px) {
+    max-width: 31.4rem;
+  }
+
+  &--supervisor {
+    border-top-color: $color-supervisor;
+
+    @media (min-width: 576px) and (max-width: 1023px) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+  }
+
+  &--team-builder {
+    border-top-color: $color-team-builder;
+
+    @media (min-width: 576px) and (max-width: 1023px) {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  &--karma {
+    border-top-color: $color-karma;
+
+    @media (min-width: 576px) and (max-width: 1023px) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+
+  &--calculator {
+    border-top-color: $color-calculator;
+
+    @media (min-width: 576px) and (max-width: 1023px) {
+      grid-column: 1 / 3;
+      grid-row: 3;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 3;
+      grid-row: 1 / 3;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    @include apply-typography($text-preset3);
+    color: $color-text-primary;
+    margin-bottom: $spacing-md;
+  }
+
+  &__description {
+    @include apply-typography($text-preset5);
+    color: $color-text-secondary;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__icon {
+    width: 5.7rem;
+    height: 5.7rem;
+    align-self: flex-end;
+    margin-top: auto;
+  }
+}

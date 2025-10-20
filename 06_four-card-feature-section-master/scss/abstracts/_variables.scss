@@ -1,0 +1,135 @@
+// ==========================================================================
+// COLORS - Four Card Feature Section
+// ==========================================================================
+
+// Primary Colors
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+// Neutral Colors
+$grey-500: hsl(234, 12%, 34%);
+$grey-400: hsl(212, 6%, 44%);
+$white: hsl(0, 0%, 100%);
+
+// Card Border Colors (Semantic Names)
+$color-supervisor: $cyan;
+$color-team-builder: $red;
+$color-karma: $orange;
+$color-calculator: $blue;
+
+// Text Colors
+$color-text-primary: $grey-500;
+$color-text-secondary: $grey-400;
+$color-background: $white;
+$color-surface: $white;
+
+// ==========================================================================
+// TYPOGRAPHY - Four Card Feature Section
+// ==========================================================================
+
+// Font Families
+$font-family-primary: "Poppins", sans-serif;
+
+// Font Weights
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+
+// Font Size System (15px base)
+$font-size-13: 1.3rem; // 13px
+$font-size-15: 1.5rem; // 15px
+$font-size-20: 2rem; // 20px
+$font-size-24: 2.4rem; // 24px
+$font-size-36: 3.6rem; // 36px
+
+// Line Height System
+$line-height-120: 1.2;
+$line-height-135: 1.35;
+$line-height-140: 1.4;
+$line-height-160: 1.6;
+
+// Letter Spacing
+$letter-spacing-none: 0;
+$letter-spacing-tight: -0.025em;
+
+// Text Presets (Semantic Names)
+$text-preset1: (
+  font-family: $font-family-primary,
+  font-size: $font-size-36,
+  font-weight: $font-weight-light,
+  line-height: $line-height-140,
+  letter-spacing: $letter-spacing-tight,
+);
+
+$text-preset2: (
+  font-family: $font-family-primary,
+  font-size: $font-size-36,
+  font-weight: $font-weight-semi-bold,
+  line-height: $line-height-140,
+  letter-spacing: $letter-spacing-tight,
+);
+
+$text-preset3: (
+  font-family: $font-family-primary,
+  font-size: $font-size-20,
+  font-weight: $font-weight-semi-bold,
+  line-height: $line-height-135,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset4: (
+  font-family: $font-family-primary,
+  font-size: $font-size-15,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-140,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset5: (
+  font-family: $font-family-primary,
+  font-size: $font-size-13,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-160,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset1-mb: (
+  font-family: $font-family-primary,
+  font-size: $font-size-24,
+  font-weight: $font-weight-light,
+  line-height: $line-height-140,
+  letter-spacing: $letter-spacing-tight,
+);
+
+$text-preset2-mb: (
+  font-family: $font-family-primary,
+  font-size: $font-size-24,
+  font-weight: $font-weight-semi-bold,
+  line-height: $line-height-140,
+  letter-spacing: $letter-spacing-tight,
+);
+
+$text-preset4-mb: (
+  font-family: $font-family-primary,
+  font-size: $font-size-15,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-140,
+  letter-spacing: 0.1rem,
+);
+
+// Spacing Scale                                                                                         │ │
+$spacing-50: 0.4rem; // 4px                                                                          │ │
+$spacing-100: 0.8rem; // 8px                                                                          │ │
+$spacing-200: 1.6rem; // 16px                                                                         │ │
+$spacing-300: 2.4rem; // 24px                                                                         │ │
+$spacing-400: 3.2rem; // 32px                                                                         │ │
+$spacing-500: 4rem; // 40px
+
+// Semantic Spacing Names
+$spacing-sm: $spacing-100; // 8px
+$spacing-md: $spacing-200; // 16px
+$spacing-lg: $spacing-300; // 24px
+$spacing-xl: $spacing-400; // 32px
+$spacing-xxl: $spacing-500; // 40px

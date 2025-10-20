@@ -1,0 +1,75 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.feature-section {
+  max-width: 111rem;
+  margin: 0 auto;
+  padding: $spacing-xl 3rem;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 6rem;
+    @media (min-width: 576px) {
+      margin-bottom: 7.4rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: $spacing-md;
+
+    &-light {
+      @include apply-typography($text-preset1-mb);
+      color: $color-text-secondary;
+      display: block;
+
+      @media (min-width: 576px) {
+        @include apply-typography($text-preset1);
+        display: block;
+      }
+    }
+
+    &-bold {
+      @include apply-typography($text-preset2-mb);
+      color: $color-text-primary;
+      display: block;
+
+      @media (min-width: 576px) {
+        @include apply-typography($text-preset2);
+        display: block;
+      }
+    }
+  }
+
+  &__description {
+    @include apply-typography($text-preset4-mb);
+    color: $color-text-secondary;
+    max-width: 54rem;
+    margin: 0 auto;
+
+    @media (min-width: 576px) {
+      @include apply-typography($text-preset4);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    @media (min-width: 576px) and (max-width: 1023px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: $spacing-xl;
+      justify-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: $spacing-xl;
+      align-items: center;
+    }
+  }
+}
