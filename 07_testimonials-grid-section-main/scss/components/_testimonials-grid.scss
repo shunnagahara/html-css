@@ -1,0 +1,88 @@
+@use "../abstracts/variables" as *;
+
+.testimonials-grid {
+  display: grid;
+  gap: $spacing-300;
+  padding: $spacing-400;
+
+  // Mobile layout (default)
+  grid-template-columns: 1fr;
+
+  // Tablet layout
+  @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 0.0625rem}) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: $spacing-400;
+    row-gap: $spacing-300;
+    padding: $spacing-500;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    .testimonial-card--daniel {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    .testimonial-card--jonathan {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .testimonial-card--jeanette {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .testimonial-card--patrick {
+      grid-column: 1 / 3;
+      grid-row: 3;
+    }
+
+    .testimonial-card--kira {
+      grid-column: 1 / 3;
+      grid-row: 4;
+    }
+  }
+
+  // Desktop layout
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    // gap: $spacing-400;
+    column-gap: $spacing-400;
+    row-gap: $spacing-300;
+    padding: $spacing-600;
+    max-width: 111rem;
+    margin: 0 auto;
+
+    // Daniel - spans 2 columns, top row
+    .testimonial-card--daniel {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    // Jonathan - single column, top right
+    .testimonial-card--jonathan {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    // Jeanette - single column, bottom left
+    .testimonial-card--jeanette {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    // Patrick - spans 2 columns, bottom center
+    .testimonial-card--patrick {
+      grid-column: 2 / 4;
+      grid-row: 2;
+    }
+
+    // Kira - single column, spans 2 rows, far right
+    .testimonial-card--kira {
+      grid-column: 4;
+      grid-row: 1 / 3;
+    }
+  }
+}

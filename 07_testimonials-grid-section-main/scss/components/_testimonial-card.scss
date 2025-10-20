@@ -1,0 +1,130 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.testimonial-card {
+  background-color: $white;
+  border-radius: $spacing-100;
+  padding: $spacing-400;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.15);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-200;
+    margin-bottom: $spacing-200;
+  }
+
+  &__avatar {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  &__name {
+    @include apply-typography($text-preset-2);
+    color: $color-text-primary;
+    margin: 0;
+  }
+
+  &__status {
+    @include apply-typography($text-preset-4);
+    color: $color-text-secondary;
+    margin: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-200;
+  }
+
+  &__quote {
+    @include apply-typography($text-preset-1);
+    color: $color-text-primary;
+    margin: 0;
+    text-wrap: auto;
+  }
+
+  &__text {
+    @include apply-typography($text-preset-3);
+    color: $color-text-secondary;
+    margin: 0;
+  }
+
+  // Daniel - Purple card
+  &--daniel {
+    background-color: $purple-500;
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 2rem;
+
+    .testimonial-card__name,
+    .testimonial-card__quote {
+      color: $white;
+    }
+
+    .testimonial-card__status,
+    .testimonial-card__text {
+      color: $purple-50;
+    }
+
+    .testimonial-card__avatar {
+      border: 2px solid $purple-300;
+    }
+
+    // Tablet layout
+    @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 0.0625rem}) {
+      background-position: top right 20rem;
+    }
+  }
+
+  // Jonathan - Grey card
+  &--jonathan {
+    background-color: $grey-500;
+
+    .testimonial-card__name,
+    .testimonial-card__quote {
+      color: $white;
+    }
+
+    .testimonial-card__status,
+    .testimonial-card__text {
+      color: $grey-100;
+    }
+  }
+
+  // Jeanette - White card (default styles)
+  &--jeanette {
+    .testimonial-card__quote {
+      color: $grey-500;
+    }
+    .testimonial-card__text {
+      color: $grey-400;
+    }
+  }
+
+  // Patrick - Dark blue card
+  &--patrick {
+    background-color: $dark-blue;
+
+    .testimonial-card__name,
+    .testimonial-card__quote {
+      color: $white;
+    }
+
+    .testimonial-card__status,
+    .testimonial-card__text {
+      color: $grey-100;
+    }
+  }
+
+  // Kira - White card (default styles)
+  &--kira {
+  }
+}

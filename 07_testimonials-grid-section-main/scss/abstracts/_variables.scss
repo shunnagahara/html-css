@@ -1,0 +1,104 @@
+// ==========================================================================
+// COLORS - Testimonials Grid Section
+// ==========================================================================
+
+// Primary Colors
+$purple-50: hsl(260, 100%, 95%);
+$purple-300: hsl(264, 82%, 70%);
+$purple-500: hsl(263, 55%, 52%);
+
+// Neutral Colors
+$white: hsl(0, 0%, 100%);
+$grey-100: hsl(214, 17%, 92%);
+$grey-200: hsl(0, 0%, 81%);
+$grey-400: hsl(224, 10%, 45%);
+$grey-500: hsl(217, 19%, 35%);
+$dark-blue: hsl(219, 29%, 14%);
+$black: hsl(0, 0%, 7%);
+
+// Color assignments
+$color-primary: $purple-500;
+$color-surface: $white;
+$color-background: $grey-100;
+
+$color-text-primary: $dark-blue;
+$color-text-secondary: $grey-400;
+$color-text-light: $white;
+
+// ==========================================================================
+// TYPOGRAPHY - Testimonials Grid Section
+// ==========================================================================
+
+// Font Families
+$font-family-primary: "Barlow Semi Condensed", sans-serif;
+
+// Font Weights
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+// Font Size System
+$font-size-11: 1.1rem; // 11px
+$font-size-13: 1.3rem; // 13px
+$font-size-20: 2rem; // 20px
+
+// Line Height System
+$line-height-110: 1.1;
+$line-height-120: 1.2;
+$line-height-140: 1.4;
+
+// Letter Spacing
+$letter-spacing-none: 0;
+
+// Text Presets
+$text-preset-1: (
+  font-family: $font-family-primary,
+  font-size: $font-size-20,
+  font-weight: $font-weight-semibold,
+  line-height: $line-height-120,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-2: (
+  font-family: $font-family-primary,
+  font-size: $font-size-13,
+  font-weight: $font-weight-medium,
+  line-height: $line-height-110,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-3: (
+  font-family: $font-family-primary,
+  font-size: $font-size-13,
+  font-weight: $font-weight-medium,
+  line-height: $line-height-140,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-4: (
+  font-family: $font-family-primary,
+  font-size: $font-size-11,
+  font-weight: $font-weight-medium,
+  line-height: $line-height-110,
+  letter-spacing: $letter-spacing-none,
+);
+
+// ==========================================================================
+// SPACING - Testimonials Grid Section
+// ==========================================================================
+
+// Spacing Scale
+$spacing-50: 0.4rem; // 4px
+$spacing-100: 0.8rem; // 8px
+$spacing-200: 1.6rem; // 16px
+$spacing-300: 2.4rem; // 24px
+$spacing-400: 3.2rem; // 32px
+$spacing-500: 4rem; // 40px
+$spacing-600: 4.8rem; // 48px
+
+// ==========================================================================
+// BREAKPOINTS - Testimonials Grid Section
+// ==========================================================================
+
+$breakpoint-mobile: 37.5rem; // 600px
+$breakpoint-tablet: 48rem; // 768px
+$breakpoint-desktop: 90rem; // 1440px
