@@ -1,0 +1,232 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// モーダルの基本構造
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+
+  // デフォルトは非表示
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  // モーダルが表示されているときのスタイル
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+
+    .modal__content {
+      transform: translate(-50%, -50%) scale(1);
+
+      // スマートフォン用のtransform調整
+      @media (max-width: 64rem) {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+  }
+
+  // オーバーレイ（背景）
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+
+    // フォーカス時のアウトライン
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: -2px;
+    }
+  }
+
+  // モーダルコンテンツ
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 90%;
+    max-width: 48rem;
+    max-height: 90vh;
+    background-color: $color-surface;
+    border-radius: 1.2rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    cursor: default;
+    transition: transform 0.3s ease;
+
+    // スマートフォン対応: 上からの配置とスクロール
+    @media (max-width: 64rem) {
+      top: 5%;
+      transform: translateX(-50%) scale(0.8);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    @media (min-width: 64rem) {
+      width: 48rem;
+    }
+  }
+
+  // ヘッダー
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-400 $spacing-400 $spacing-300;
+    border-bottom: 1px solid hsla(228, 12%, 48%, 0.1);
+  }
+
+  &__title {
+    @include apply-typography($text-preset-1);
+    color: $color-text-primary;
+    margin: 0;
+    font-size: 2.4rem;
+  }
+
+  // 閉じるボタン
+  &__close {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background-color: transparent;
+    font-size: 2.4rem;
+    color: $color-text-secondary;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: hsla(228, 12%, 48%, 0.1);
+      color: $color-text-primary;
+    }
+
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+
+  // ボディ
+  &__body {
+    padding: $spacing-300 $spacing-400;
+  }
+
+  &__message {
+    @include apply-typography($text-preset-3);
+    color: $color-text-secondary;
+    margin-bottom: $spacing-400;
+    text-align: center;
+  }
+
+  // 商品情報
+  &__product {
+    display: flex;
+    align-items: center;
+    gap: $spacing-300;
+    padding: $spacing-300;
+    background-color: hsla(30, 38%, 92%, 0.3);
+    border-radius: 0.8rem;
+    margin-bottom: $spacing-400;
+  }
+
+  &__product-image {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.6rem;
+  }
+
+  // picture要素内のimgに対応
+  &__product picture {
+    display: block;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+      object-fit: cover;
+      border-radius: 0.6rem;
+    }
+  }
+
+  &__product-info {
+    flex: 1;
+  }
+
+  &__product-name {
+    @include apply-typography($text-preset-2);
+    color: $color-text-primary;
+    margin: 0 0 $spacing-100 0;
+    font-size: 1.6rem;
+  }
+
+  &__price {
+    @include apply-typography($text-preset-1);
+    color: $color-primary;
+    font-size: 2rem;
+  }
+
+  // フッター
+  &__footer {
+    display: flex;
+    gap: $spacing-200;
+    padding: $spacing-300 $spacing-400 $spacing-400;
+
+    @media (max-width: 37.5rem) {
+      flex-direction: column;
+    }
+  }
+
+  // モーダル内ボタン
+  &__button {
+    @include apply-typography($text-preset-2);
+    flex: 1;
+    padding: $spacing-200 $spacing-300;
+    border: 0.2rem solid transparent;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+
+    // セカンダリボタン
+    &--secondary {
+      background-color: transparent;
+      color: $color-text-primary;
+      border-color: hsla(228, 12%, 48%, 0.3);
+
+      &:hover {
+        background-color: hsla(228, 12%, 48%, 0.1);
+        border-color: $color-text-primary;
+      }
+    }
+
+    // プライマリボタン
+    &--primary {
+      background-color: $color-primary;
+      color: $color-surface;
+
+      &:hover {
+        background-color: $color-primary-dark;
+        transform: translateY(-1px);
+        box-shadow: 0 0.4rem 0.8rem rgba(61, 129, 104, 0.3);
+      }
+    }
+  }
+}

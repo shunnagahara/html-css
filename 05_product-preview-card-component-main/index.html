@@ -54,8 +54,39 @@
           <span class="product-card__original-price">$169.99</span>
         </div>
 
-        <button class="product-card__button">Add to Cart</button>
+        <button class="product-card__button" id="add-to-cart-btn">Add to Cart</button>
       </div>
     </main>
+
+    <!-- モーダル -->
+    <div class="modal" id="cart-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+      <div class="modal__overlay" tabindex="-1">
+        <div class="modal__content">
+          <header class="modal__header">
+            <h2 id="modal-title" class="modal__title">Added to Cart!</h2>
+            <button class="modal__close" aria-label="Close modal">&times;</button>
+          </header>
+          <div class="modal__body">
+            <p class="modal__message">Gabrielle Essence Eau De Parfum has been added to your cart.</p>
+            <div class="modal__product">
+              <picture>
+                <source media="(min-width: 64rem)" srcset="./images/image-product-desktop.jpg">
+                <img src="./images/image-product-mobile.jpg" alt="Gabrielle Essence Eau De Parfum" class="modal__product-image">
+              </picture>
+              <div class="modal__product-info">
+                <h3 class="modal__product-name">Gabrielle Essence Eau De Parfum</h3>
+                <span class="modal__price">$149.99</span>
+              </div>
+            </div>
+          </div>
+          <footer class="modal__footer">
+            <button class="modal__button modal__button--secondary">Continue Shopping</button>
+            <button class="modal__button modal__button--primary">View Cart</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./js/modal.js"></script>
   </body>
 </html>

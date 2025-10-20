@@ -204,6 +204,219 @@ textarea:not([rows]) {
   background-position: center;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal.is-active .modal__content {
+  transform: translate(-50%, -50%) scale(1);
+}
+@media (max-width: 64rem) {
+  .modal.is-active .modal__content {
+    transform: translateX(-50%) scale(1);
+  }
+}
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  cursor: pointer;
+}
+.modal__overlay:focus {
+  outline: 2px solid hsl(158, 36%, 37%);
+  outline-offset: -2px;
+}
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 90%;
+  max-width: 48rem;
+  max-height: 90vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 64rem) {
+  .modal__content {
+    top: 5%;
+    transform: translateX(-50%) scale(0.8);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+@media (min-width: 64rem) {
+  .modal__content {
+    width: 48rem;
+  }
+}
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 3.2rem 2.4rem;
+  border-bottom: 1px solid hsla(228, 12%, 48%, 0.1);
+}
+.modal__title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: hsl(212, 21%, 14%);
+  margin: 0;
+  font-size: 2.4rem;
+}
+.modal__close {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background-color: transparent;
+  font-size: 2.4rem;
+  color: hsl(228, 12%, 48%);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.modal__close:hover {
+  background-color: hsla(228, 12%, 48%, 0.1);
+  color: hsl(212, 21%, 14%);
+}
+.modal__close:focus {
+  outline: 2px solid hsl(158, 36%, 37%);
+  outline-offset: 2px;
+}
+.modal__body {
+  padding: 2.4rem 3.2rem;
+}
+.modal__message {
+  font-family: "Montserrat", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: hsl(228, 12%, 48%);
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+.modal__product {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  background-color: hsla(30, 38%, 92%, 0.3);
+  border-radius: 0.8rem;
+  margin-bottom: 3.2rem;
+}
+.modal__product-image {
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.6rem;
+}
+.modal__product picture {
+  display: block;
+}
+.modal__product picture img {
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.6rem;
+}
+.modal__product-info {
+  flex: 1;
+}
+.modal__product-name {
+  font-family: "Montserrat", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: hsl(212, 21%, 14%);
+  margin: 0 0 0.8rem 0;
+  font-size: 1.6rem;
+}
+.modal__price {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: hsl(158, 36%, 37%);
+  font-size: 2rem;
+}
+.modal__footer {
+  display: flex;
+  gap: 1.6rem;
+  padding: 2.4rem 3.2rem 3.2rem;
+}
+@media (max-width: 37.5rem) {
+  .modal__footer {
+    flex-direction: column;
+  }
+}
+.modal__button {
+  font-family: "Montserrat", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0;
+  flex: 1;
+  padding: 1.6rem 2.4rem;
+  border: 0.2rem solid transparent;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+}
+.modal__button:focus {
+  outline: 2px solid hsl(158, 36%, 37%);
+  outline-offset: 2px;
+}
+.modal__button--secondary {
+  background-color: transparent;
+  color: hsl(212, 21%, 14%);
+  border-color: hsla(228, 12%, 48%, 0.3);
+}
+.modal__button--secondary:hover {
+  background-color: hsla(228, 12%, 48%, 0.1);
+  border-color: hsl(212, 21%, 14%);
+}
+.modal__button--primary {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+}
+.modal__button--primary:hover {
+  background-color: hsl(158, 42%, 18%);
+  transform: translateY(-1px);
+  box-shadow: 0 0.4rem 0.8rem rgba(61, 129, 104, 0.3);
+}
+
 body {
   display: flex;
   justify-content: center;
