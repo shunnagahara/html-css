@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理画面</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="site-title">管理画面</h1>
+            <div class="user-info">
+                <span>管理者</span>
+                <button class="logout-btn">ログアウト</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">ダッシュボード</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ユーザー管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">商品管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">注文管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">設定</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <div class="content">
+            <h2>ダッシュボード</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>ユーザー数</h3>
+                    <p class="stat-number">1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>注文数</h3>
+                    <p class="stat-number">567</p>
+                </div>
+                <div class="stat-card">
+                    <h3>売上</h3>
+                    <p class="stat-number">¥890,123</p>
+                </div>
+            </div>
+            
+            <section class="recent-activity">
+                <h3>最近の活動</h3>
+                <ul class="activity-list">
+                    <li>新規ユーザー登録: 田中太郎</li>
+                    <li>注文完了: #ORD-001</li>
+                    <li>商品追加: サンプル商品</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

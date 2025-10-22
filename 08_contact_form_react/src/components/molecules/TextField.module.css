@@ -1,0 +1,49 @@
+.textField {
+  margin-bottom: 2.4rem;
+}
+.textField__label {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #2a4144;
+}
+.textField__input {
+  font-family: "Karla", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  width: 100%;
+  padding: 1.2rem 2.4rem;
+  border: 0.1rem solid #86a2a5;
+  border-radius: 0.8rem;
+  background-color: #ffffff;
+  color: #2a4144;
+  transition: border-color 0.2s ease;
+}
+.textField__input:focus {
+  outline: none;
+  border-color: #0c7d69;
+}
+.textField__input::-moz-placeholder {
+  color: #86a2a5;
+}
+.textField__input::placeholder {
+  color: #86a2a5;
+}
+.textField__input--error {
+  border-color: #d73c3c;
+}
+.textField__error {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #d73c3c;
+  margin-top: 0.8rem;
+}/*# sourceMappingURL=TextField.module.css.map */

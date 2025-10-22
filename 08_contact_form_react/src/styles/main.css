@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #e0f1e8;
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.2rem 1.6rem;
+  min-height: 100vh;
+}
+@media (min-width: 48rem) {
+  #root {
+    padding: 3.2rem 1.6rem;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,34 @@
+.button {
+  font-family: "Karla", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  background-color: #0c7d69;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1.6rem 4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+.button:hover {
+  background-color: rgb(7.5328467153, 78.4671532847, 65.9124087591);
+}
+.button:disabled {
+  background-color: #86a2a5;
+  cursor: not-allowed;
+}
+.button--primary {
+  background-color: #0c7d69;
+}
+.button--primary:hover {
+  background-color: rgb(7.5328467153, 78.4671532847, 65.9124087591);
+}
+.button--secondary {
+  background-color: #86a2a5;
+}
+.button--secondary:hover {
+  background-color: rgb(105.7819905213, 138.691943128, 142.2180094787);
+}/*# sourceMappingURL=Button.module.css.map */

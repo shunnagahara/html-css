@@ -1,0 +1,43 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.textField {
+  margin-bottom: $spacing-300;
+
+  &__label {
+    @include text-preset($text-preset-body-sm);
+    display: block;
+    margin-bottom: $spacing-100;
+    color: $color-text-primary;
+  }
+
+  &__input {
+    @include text-preset($text-preset-body-md-regular);
+    width: 100%;
+    padding: $spacing-150 $spacing-300;
+    border: 0.1rem solid $grey-500;
+    border-radius: 0.8rem;
+    background-color: $white;
+    color: $color-text-primary;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+    }
+
+    &::placeholder {
+      color: $grey-500;
+    }
+
+    &--error {
+      border-color: $color-error;
+    }
+  }
+
+  &__error {
+    @include text-preset($text-preset-body-sm);
+    color: $color-error;
+    margin-top: $spacing-100;
+  }
+}

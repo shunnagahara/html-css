@@ -1,0 +1,55 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.toast {
+  position: fixed;
+  top: $spacing-300;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $grey-900;
+  color: $white;
+  border-radius: 1.2rem;
+  padding: $spacing-300;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: calc(100% - $spacing-400);
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 45rem;
+    max-width: none;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-200;
+  }
+
+  &__icon {
+    color: $color-primary;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  &__message {
+    flex: 1;
+  }
+
+  &__title {
+    @include text-preset($text-preset-body-md-bold);
+    color: $white;
+    margin: 0 0 $spacing-100 0;
+  }
+
+  &__text {
+    @include text-preset($text-preset-body-sm);
+    color: $grey-500;
+    margin: 0;
+    line-height: 1.5;
+    margin-left: -3rem;
+
+    @media (min-width: $breakpoint-tablet) {
+      white-space: nowrap;
+    }
+  }
+}

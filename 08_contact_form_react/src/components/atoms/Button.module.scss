@@ -1,0 +1,39 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.button {
+  @include text-preset($text-preset-body-md-bold);
+  background-color: $color-primary;
+  color: $white;
+  border: none;
+  border-radius: 0.8rem;
+  padding: $spacing-200 $spacing-500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+
+  &:disabled {
+    background-color: $grey-500;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: $grey-500;
+
+    &:hover {
+      background-color: darken($grey-500, 10%);
+    }
+  }
+}

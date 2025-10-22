@@ -1,0 +1,36 @@
+.checkbox {
+  margin-bottom: 2.4rem;
+}
+.checkbox__wrapper {
+  position: relative;
+}
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox__label {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  color: #2a4144;
+  gap: 1.6rem;
+}
+.checkbox__text {
+  flex: 1;
+  line-height: 1.5;
+}
+.checkbox__error {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #d73c3c;
+  margin-top: 0.8rem;
+}/*# sourceMappingURL=Checkbox.module.css.map */

@@ -1,0 +1,51 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.contactForm {
+  background-color: $white;
+  padding: $spacing-300;
+  border-radius: 1.6rem;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
+
+  &__title {
+    @include text-preset($text-preset-heading);
+    color: $color-text-primary;
+    margin: 0 0 $spacing-400 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-300;
+    margin-bottom: $spacing-300;
+
+    @media (min-width: $breakpoint-tablet) {
+      flex-direction: row;
+      gap: $spacing-200;
+    }
+  }
+
+  &__halfWidth {
+    margin-bottom: 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      flex: 1;
+    }
+  }
+
+  &__consentCheckbox {
+    margin-bottom: $spacing-500;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $spacing-500;
+    max-width: 73rem;
+  }
+}

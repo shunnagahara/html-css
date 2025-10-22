@@ -1,0 +1,7 @@
+@mixin text-preset($preset) {
+  font-family: map-get($preset, font-family);
+  font-size: map-get($preset, font-size);
+  font-weight: map-get($preset, font-weight);
+  line-height: map-get($preset, line-height);
+  letter-spacing: map-get($preset, letter-spacing);
+}

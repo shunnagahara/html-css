@@ -1,0 +1,22 @@
+@use "../../styles/abstracts/variables" as *;
+
+.checkboxIcon {
+  width: 20px;
+  height: 20px;
+  border: 0.2rem solid $grey-500;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background-color: $white;
+
+  &--checked {
+    border-color: $color-primary;
+    background-color: $color-primary;
+  }
+
+  &__check {
+    color: $white;
+  }
+}

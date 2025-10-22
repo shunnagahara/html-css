@@ -1,0 +1,50 @@
+.contactForm {
+  background-color: #ffffff;
+  padding: 2.4rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
+}
+.contactForm__title {
+  font-family: "Karla", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #2a4144;
+  margin: 0 0 3.2rem 0;
+}
+.contactForm__form {
+  display: flex;
+  flex-direction: column;
+}
+.contactForm__fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 48rem) {
+  .contactForm__fieldGroup {
+    flex-direction: row;
+    gap: 1.6rem;
+  }
+}
+.contactForm__halfWidth {
+  margin-bottom: 0;
+}
+@media (min-width: 48rem) {
+  .contactForm__halfWidth {
+    flex: 1;
+  }
+}
+.contactForm__consentCheckbox {
+  margin-bottom: 4rem;
+}
+@media (min-width: 48rem) {
+  .contactForm {
+    padding: 4rem;
+    max-width: 73rem;
+  }
+}/*# sourceMappingURL=ContactForm.module.css.map */

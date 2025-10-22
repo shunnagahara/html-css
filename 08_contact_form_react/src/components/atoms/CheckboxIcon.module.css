@@ -1,0 +1,18 @@
+.checkboxIcon {
+  width: 20px;
+  height: 20px;
+  border: 0.2rem solid #86a2a5;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+.checkboxIcon--checked {
+  border-color: #0c7d69;
+  background-color: #0c7d69;
+}
+.checkboxIcon__check {
+  color: #ffffff;
+}/*# sourceMappingURL=CheckboxIcon.module.css.map */

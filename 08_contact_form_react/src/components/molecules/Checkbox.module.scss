@@ -1,0 +1,36 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.checkbox {
+  margin-bottom: $spacing-300;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__label {
+    @include text-preset($text-preset-body-sm);
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    color: $color-text-primary;
+    gap: $spacing-200;
+  }
+
+  &__text {
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  &__error {
+    @include text-preset($text-preset-body-sm);
+    color: $color-error;
+    margin-top: $spacing-100;
+  }
+}

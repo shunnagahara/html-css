@@ -1,0 +1,103 @@
+// ==========================================================================
+// COLORS - Contact Form
+// ==========================================================================
+
+// Primary Colors
+$grey-900: #2a4144; // hsl(187°, 24%, 22%)
+$grey-500: #86a2a5; // hsl(186°, 15%, 59%)
+$green-600: #0c7d69; // hsl(169°, 82%, 27%)
+$green-200: #e0f1e8; // hsl(148°, 38%, 91%)
+
+// Neutral Colors
+$white: #ffffff; // hsl(0°, 0%, 100%)
+
+// Error Color
+$red-error: #d73c3c; // hsl(0°, 66%, 54%)
+
+// Color assignments
+$color-primary: $green-600;
+$color-primary-light: $green-200;
+$color-surface: $white;
+$color-background: $green-200;
+
+$color-text-primary: $grey-900;
+$color-text-secondary: $grey-500;
+$color-error: $red-error;
+
+// ==========================================================================
+// TYPOGRAPHY - Contact Form
+// ==========================================================================
+
+// Font Families
+$font-family-primary: "Karla", sans-serif;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Font Size System
+$font-size-16: 1.6rem; // 16px
+$font-size-18: 1.8rem; // 18px
+$font-size-32: 3.2rem; // 32px
+
+// Line Height System
+$line-height-100: 1;
+$line-height-150: 1.5;
+
+// Letter Spacing
+$letter-spacing-none: 0;
+$letter-spacing-negative: -1px;
+
+// Text Presets
+$text-preset-heading: (
+  font-family: $font-family-primary,
+  font-size: $font-size-32,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-100,
+  letter-spacing: $letter-spacing-negative,
+);
+
+$text-preset-body-md-bold: (
+  font-family: $font-family-primary,
+  font-size: $font-size-18,
+  font-weight: $font-weight-bold,
+  line-height: $line-height-150,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-body-md-regular: (
+  font-family: $font-family-primary,
+  font-size: $font-size-18,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-150,
+  letter-spacing: $letter-spacing-none,
+);
+
+$text-preset-body-sm: (
+  font-family: $font-family-primary,
+  font-size: $font-size-16,
+  font-weight: $font-weight-regular,
+  line-height: $line-height-150,
+  letter-spacing: $letter-spacing-none,
+);
+
+// ==========================================================================
+// SPACING - Contact Form
+// ==========================================================================
+
+// Spacing Scale
+$spacing-100: 0.8rem; // 8px
+$spacing-150: 1.2rem; // 12px
+$spacing-200: 1.6rem; // 16px
+$spacing-300: 2.4rem; // 24px
+$spacing-400: 3.2rem; // 32px
+$spacing-500: 4rem; // 40px
+$spacing-1600: 12.8rem; // 128px
+
+// ==========================================================================
+// BREAKPOINTS - Contact Form
+// ==========================================================================
+
+$breakpoint-mobile: 37.5rem; // 600px
+$breakpoint-tablet: 48rem; // 768px
+$breakpoint-desktop: 90rem; // 1440px
