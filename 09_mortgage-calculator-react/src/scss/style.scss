@@ -1,0 +1,24 @@
+// 1. ABSTRACTS
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+// 2. BASE
+@use "base/reset";
+
+// 3. COMPONENTS
+@use "components/mortgage-calculator";
+@use "components/form";
+@use "components/results";
+
+body {
+  min-height: 100vh;
+  background-color: $color-background;
+  font-family: $font-family-primary;
+
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-400;
+  }
+}

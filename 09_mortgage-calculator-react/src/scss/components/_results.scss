@@ -1,0 +1,147 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.results {
+  padding: $spacing-300;
+  background-color: $slate-900;
+  color: $white;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $spacing-400;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: $spacing-500;
+    border-radius: 0 0 $spacing-300 8rem;
+  }
+
+  &--empty {
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--completed {
+    text-align: left;
+  }
+}
+
+.results__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-200;
+  text-align: center;
+
+  @media (min-width: $breakpoint-desktop) {
+    gap: $spacing-300;
+  }
+}
+
+.results__illustration {
+  width: 19.2rem;
+  height: auto;
+  margin-bottom: $spacing-200;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 24rem;
+    margin-bottom: 0;
+  }
+}
+
+.results__title {
+  @include apply-typography($text-preset-3);
+
+  margin-bottom: $spacing-200;
+  color: $white;
+
+  @media (min-width: $breakpoint-tablet) {
+    @include apply-typography($text-preset-2);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    @include apply-typography($text-preset-2);
+  }
+}
+
+.results__description {
+  @include apply-typography($text-preset-5);
+  margin-bottom: $spacing-500;
+  color: $slate-300;
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-bottom: $spacing-500;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    @include apply-typography($text-preset-4);
+  }
+}
+
+.results__completed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.results__summary {
+  padding: $spacing-400 $spacing-300;
+  border-radius: $spacing-100;
+  background-color: rgb(0 0 0 / 25%);
+  border-top: 0.4rem solid $lime;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $spacing-500;
+  }
+}
+
+.results__item {
+  &:not(:last-child) {
+    margin-bottom: $spacing-400;
+    padding-bottom: $spacing-400;
+    border-bottom: 0.1rem solid rgb(255 255 255 / 25%);
+  }
+
+  &--primary {
+    margin-bottom: $spacing-400;
+    padding-bottom: $spacing-400;
+  }
+}
+
+.results__label {
+  @include apply-typography($text-preset-5);
+
+  margin-bottom: $spacing-100;
+  color: $slate-300;
+
+  @media (min-width: $breakpoint-desktop) {
+    @include apply-typography($text-preset-4);
+  }
+}
+
+.results__amount {
+  &--large {
+    @include apply-typography($text-preset-1);
+
+    color: $lime;
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 4rem;
+    }
+  }
+
+  &--small {
+    @include apply-typography($text-preset-2);
+    letter-spacing: 0;
+    color: $white;
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 4rem;
+    }
+  }
+}
