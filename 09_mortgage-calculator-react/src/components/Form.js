@@ -52,10 +52,6 @@ export default function Form({ onCalculate, onClear }) {
     }
   };
 
-  useEffect(() => {
-    console.log(formData.mortgageAmount);
-  }, [formData.mortgageAmount]);
-
   return (
     <section className="form">
       <header className="form__header">
