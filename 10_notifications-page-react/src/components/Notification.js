@@ -125,10 +125,6 @@ export default function Notification({
                 border: `0.1rem solid ${theme.palette.navy[100]}`,
                 backgroundColor: theme.palette.common.white,
                 cursor: 'pointer',
-                transition: 'background-color 0.2s ease',
-                '&:hover': {
-                  backgroundColor: theme.palette.blue[100],
-                },
               })}
             >
               <Typography

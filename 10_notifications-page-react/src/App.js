@@ -26,7 +26,6 @@ function App() {
         component="main"
         data-component="AppRoot"
         sx={(theme) => ({
-          minHeight: '100vh',
           padding: theme.spacing(2),
           [theme.breakpoints.up('sm')]: {
             padding: theme.spacing(4),
@@ -45,13 +44,13 @@ function App() {
             maxWidth: 600,
             margin: '0 auto',
             backgroundColor: theme.palette.common.white,
-            borderRadius: '1.6rem',
             padding: theme.spacing(2),
             [theme.breakpoints.up('sm')]: {
               padding: theme.spacing(4),
               maxWidth: 730,
             },
             [theme.breakpoints.up('md')]: {
+              borderRadius: '1.6rem',
               boxShadow: '0 0.2rem 1.6rem rgba(28, 32, 43, 0.1)',
             },
           })}
@@ -80,7 +79,8 @@ function App() {
                   data-component="NotificationsBadge"
                   sx={(theme) => ({
                     minWidth: 32,
-                    padding: '0.2rem 1rem',
+                    paddingX: '0.2rem',
+                    paddingY: '0.1rem',
                     borderRadius: '0.6rem',
                     textAlign: 'center',
                     backgroundColor: theme.palette.blue[950],
@@ -97,10 +97,7 @@ function App() {
                 data-component="NotificationsMarkAllButton"
                 sx={(theme) => ({
                   ...theme.typography.preset4_medium,
-                  textTransform: 'none',
                   color: theme.palette.grey[600],
-                  padding: 0,
-                  minWidth: 'auto',
                 })}
               >
                 Mark all as read
