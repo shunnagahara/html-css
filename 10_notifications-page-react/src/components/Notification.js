@@ -62,9 +62,13 @@ export default function Notification({
             <Box
               component="span"
               sx={(theme) => ({
+                cursor: 'pointer',
                 ...theme.typography.preset3_bold,
                 color: theme.palette.navy[950],
                 marginRight: theme.spacing(0.5),
+                '&:hover': {
+                  color: theme.palette.blue[950],
+                },
               })}
             >
               {actorName}
@@ -75,10 +79,12 @@ export default function Notification({
                 component="span"
                 sx={(theme) => ({
                   ...theme.typography.preset3_bold,
-                  color: isGroupAction
-                    ? theme.palette.blue[950]
-                    : theme.palette.grey[600],
+                  cursor: 'pointer',
+                  color: theme.palette.grey[600],
                   marginLeft: theme.spacing(0.5),
+                  '&:hover': {
+                    color: theme.palette.blue[950],
+                  },
                 })}
               >
                 {target}
@@ -125,6 +131,9 @@ export default function Notification({
                 border: `0.1rem solid ${theme.palette.navy[100]}`,
                 backgroundColor: theme.palette.common.white,
                 cursor: 'pointer',
+                '&:hover': {
+                  backgroundColor: theme.palette.blue[100],
+                },
               })}
             >
               <Typography
@@ -154,6 +163,7 @@ export default function Notification({
               borderRadius: '0.8rem',
               objectFit: 'cover',
               border: `0.1rem solid ${theme.palette.navy[100]}`,
+              cursor: 'pointer',
               [theme.breakpoints.up('sm')]: {
                 width: 56,
                 height: 56,

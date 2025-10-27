@@ -13,6 +13,7 @@ import { theme } from './theme';
 import './App.css';
 import NotificationList from './components/NotificationList';
 import { notifications } from './data/notifications';
+import Header from './components/Header';
 
 function App() {
   const unreadCount = notifications.filter(
@@ -56,54 +57,7 @@ function App() {
           })}
         >
           <Stack spacing={3}>
-            <Stack
-              direction="row"
-              alignItems="center"
-              justifyContent="space-between"
-              data-component="NotificationsHeader"
-            >
-              <Stack direction="row" spacing={2} alignItems="center">
-                <Typography
-                  component="h1"
-                  data-component="NotificationsTitle"
-                  sx={(theme) => ({
-                    ...theme.typography.preset1,
-                    margin: 0,
-                    color: theme.palette.navy[950],
-                  })}
-                >
-                  Notifications
-                </Typography>
-                <Box
-                  component="span"
-                  data-component="NotificationsBadge"
-                  sx={(theme) => ({
-                    minWidth: 32,
-                    paddingX: '0.2rem',
-                    paddingY: '0.1rem',
-                    borderRadius: '0.6rem',
-                    textAlign: 'center',
-                    backgroundColor: theme.palette.blue[950],
-                    color: theme.palette.common.white,
-                    ...theme.typography.preset3_bold,
-                  })}
-                >
-                  {unreadCount}
-                </Box>
-              </Stack>
-
-              <Button
-                variant="text"
-                data-component="NotificationsMarkAllButton"
-                sx={(theme) => ({
-                  ...theme.typography.preset4_medium,
-                  color: theme.palette.grey[600],
-                })}
-              >
-                Mark all as read
-              </Button>
-            </Stack>
-
+            <Header unreadCount={unreadCount} />
             <NotificationList notifications={notifications} />
           </Stack>
         </Box>

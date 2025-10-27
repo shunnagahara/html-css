@@ -50,6 +50,10 @@ export default function Header({ unreadCount }) {
           color: theme.palette.grey[600],
           padding: 0,
           minWidth: 'auto',
+          '&:hover': {
+            color: theme.palette.blue[950],
+            backgroundColor: 'transparent',
+          },
         })}
       >
         Mark all as read
