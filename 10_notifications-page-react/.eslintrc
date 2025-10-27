@@ -1,0 +1,20 @@
+{
+  "plugins": ["perfectionist"],
+  "rules": {
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "order": "asc", // アルファベット順
+        "type": "natural",
+        "groups": [
+          ["display", "position", "top", "right", "bottom", "left"],
+          ["flex", "flexDirection", "justifyContent", "alignItems"],
+          ["width", "height", "maxWidth", "minHeight"],
+          ["margin", "marginTop", "padding", "paddingTop"],
+          ["fontSize", "fontWeight", "lineHeight"],
+          ["color", "backgroundColor", "boxShadow"],
+        ],
+      },
+    ],
+  },
+}

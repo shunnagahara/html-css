@@ -1,0 +1,63 @@
+{
+  "root": true,
+  "extends": ["react-app", "react-app/jest", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["prettier", "perfectionist"],
+  "rules": {
+    "prettier/prettier": "error",
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "order": "asc",
+        "type": "natural",
+        "customGroups": [
+          {
+            "groupName": "layout",
+            "selector": "property",
+            "elementNamePattern": "^(display|position|top|right|bottom|left)$"
+          },
+          {
+            "groupName": "flex",
+            "selector": "property",
+            "elementNamePattern": "^(flex|flex(Direction)?|justifyContent|alignItems)$"
+          },
+          {
+            "groupName": "size",
+            "selector": "property",
+            "elementNamePattern": "^(width|height|maxWidth|minHeight)$"
+          },
+          {
+            "groupName": "spacing",
+            "selector": "property",
+            "elementNamePattern": "^(margin|margin(?:Top|Right|Bottom|Left)?|padding|padding(?:Top|Right|Bottom|Left)?)$"
+          },
+          {
+            "groupName": "typography",
+            "selector": "property",
+            "elementNamePattern": "^(fontSize|fontWeight|lineHeight)$"
+          },
+          {
+            "groupName": "colors",
+            "selector": "property",
+            "elementNamePattern": "^(color|backgroundColor|boxShadow)$"
+          }
+        ],
+        "groups": [
+          "layout",
+          "flex",
+          "size",
+          "spacing",
+          "typography",
+          "colors",
+          "unknown"
+        ]
+      }
+    ]
+  }
+}

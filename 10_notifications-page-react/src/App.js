@@ -28,31 +28,31 @@ function App() {
         data-component="AppRoot"
         sx={(theme) => ({
           padding: theme.spacing(2),
-          [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing(4),
-            display: 'flex',
-            justifyContent: 'center',
-          },
           [theme.breakpoints.up('md')]: {
             backgroundColor: theme.palette.navy[50],
+          },
+          [theme.breakpoints.up('sm')]: {
+            display: 'flex',
+            justifyContent: 'center',
+            padding: theme.spacing(4),
           },
         })}
       >
         <Box
           data-component="NotificationsPanel"
           sx={(theme) => ({
-            width: '100%',
             maxWidth: 600,
+            width: '100%',
             margin: '0 auto',
-            backgroundColor: theme.palette.common.white,
             padding: theme.spacing(2),
-            [theme.breakpoints.up('sm')]: {
-              padding: theme.spacing(4),
-              maxWidth: 730,
-            },
+            backgroundColor: theme.palette.common.white,
             [theme.breakpoints.up('md')]: {
-              borderRadius: '1.6rem',
               boxShadow: '0 0.2rem 1.6rem rgba(28, 32, 43, 0.1)',
+              borderRadius: '1.6rem',
+            },
+            [theme.breakpoints.up('sm')]: {
+              maxWidth: 730,
+              padding: theme.spacing(4),
             },
           })}
         >

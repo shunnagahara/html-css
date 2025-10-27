@@ -2,16 +2,16 @@ import React from 'react';
 import { Box, Stack, Avatar, Typography } from '@mui/material';
 
 export default function Notification({
-  actorName,
-  actorAvatar,
   action,
   actionType,
-  target,
-  timeAgo,
+  actorAvatar,
+  actorName,
   image,
   imageAlt,
   isUnread,
   privateMessage,
+  target,
+  timeAgo,
 }) {
   const isGroupAction = actionType === 'group';
 
@@ -22,23 +22,23 @@ export default function Notification({
       spacing={2}
       data-component="Notification"
       sx={(theme) => ({
+        alignItems: 'flex-start',
+        padding: theme.spacing(2),
         backgroundColor: isUnread
           ? theme.palette.blue[100]
           : theme.palette.common.white,
         borderRadius: '1.2rem',
-        padding: theme.spacing(2),
-        alignItems: 'flex-start',
-        transition: 'background-color 0.2s ease',
         [theme.breakpoints.up('sm')]: {
           padding: theme.spacing(3),
         },
+        transition: 'background-color 0.2s ease',
       })}
     >
       <Avatar
         src={actorAvatar}
         alt={actorName}
         data-component="NotificationAvatar"
-        sx={{ width: 48, height: 48 }}
+        sx={{ height: 48, width: 48 }}
       />
 
       <Stack
@@ -64,8 +64,8 @@ export default function Notification({
               sx={(theme) => ({
                 cursor: 'pointer',
                 ...theme.typography.preset3_bold,
-                color: theme.palette.navy[950],
                 marginRight: theme.spacing(0.5),
+                color: theme.palette.navy[950],
                 '&:hover': {
                   color: theme.palette.blue[950],
                 },
@@ -79,12 +79,12 @@ export default function Notification({
                 component="span"
                 sx={(theme) => ({
                   ...theme.typography.preset3_bold,
-                  cursor: 'pointer',
-                  color: theme.palette.grey[600],
                   marginLeft: theme.spacing(0.5),
+                  color: theme.palette.grey[600],
                   '&:hover': {
                     color: theme.palette.blue[950],
                   },
+                  cursor: 'pointer',
                 })}
               >
                 {target}
@@ -98,11 +98,11 @@ export default function Notification({
                 data-component="NotificationUnreadIndicator"
                 sx={(theme) => ({
                   display: 'inline-block',
-                  width: 8,
                   height: 8,
+                  width: 8,
                   marginLeft: theme.spacing(1),
-                  borderRadius: '50%',
                   backgroundColor: theme.palette.red[500],
+                  borderRadius: '50%',
                 })}
               />
             ) : null}
@@ -127,13 +127,13 @@ export default function Notification({
                 ...theme.typography.preset4_medium,
                 marginTop: theme.spacing(1),
                 padding: theme.spacing(2),
-                borderRadius: '0.8rem',
-                border: `0.1rem solid ${theme.palette.navy[100]}`,
                 backgroundColor: theme.palette.common.white,
-                cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: theme.palette.blue[100],
                 },
+                border: `0.1rem solid ${theme.palette.navy[100]}`,
+                borderRadius: '0.8rem',
+                cursor: 'pointer',
               })}
             >
               <Typography
@@ -158,15 +158,15 @@ export default function Notification({
             alt={imageAlt ?? ''}
             data-component="NotificationImagePreview"
             sx={(theme) => ({
-              width: 48,
               height: 48,
-              borderRadius: '0.8rem',
-              objectFit: 'cover',
+              width: 48,
               border: `0.1rem solid ${theme.palette.navy[100]}`,
+              borderRadius: '0.8rem',
               cursor: 'pointer',
+              objectFit: 'cover',
               [theme.breakpoints.up('sm')]: {
-                width: 56,
                 height: 56,
+                width: 56,
               },
             })}
           />
