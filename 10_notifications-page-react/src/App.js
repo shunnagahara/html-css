@@ -1,11 +1,4 @@
-import {
-  ThemeProvider,
-  CssBaseline,
-  Box,
-  Stack,
-  Typography,
-  Button,
-} from '@mui/material';
+import { ThemeProvider, CssBaseline, Box, Stack } from '@mui/material';
 import '@fontsource/plus-jakarta-sans/400.css';
 import '@fontsource/plus-jakarta-sans/500.css';
 import '@fontsource/plus-jakarta-sans/700.css';
@@ -14,11 +7,18 @@ import './App.css';
 import NotificationList from './components/NotificationList';
 import { notifications } from './data/notifications';
 import Header from './components/Header';
+import { useState } from 'react';
 
 function App() {
-  const unreadCount = notifications.filter(
+  const [items, setItems] = useState(notifications);
+
+  const unreadCount = items.filter(
     (notification) => notification.isUnread
   ).length;
+
+  const handleMarkAllAsRead = () => {
+    setItems((prev) => prev.map((n) => ({ ...n, isUnread: false })));
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -57,8 +57,11 @@ function App() {
           })}
         >
           <Stack spacing={3}>
-            <Header unreadCount={unreadCount} />
-            <NotificationList notifications={notifications} />
+            <Header
+              unreadCount={unreadCount}
+              onMarkAllAsRead={handleMarkAllAsRead}
+            />
+            <NotificationList notifications={items} />
           </Stack>
         </Box>
       </Box>

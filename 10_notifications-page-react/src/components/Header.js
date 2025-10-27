@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Stack, Typography, Button } from '@mui/material';
-export default function Header({ unreadCount }) {
+export default function Header({ unreadCount, onMarkAllAsRead }) {
   return (
     <Box
       data-component="NotificationsHeader"
@@ -55,6 +55,7 @@ export default function Header({ unreadCount }) {
             backgroundColor: 'transparent',
           },
         })}
+        onClick={onMarkAllAsRead}
       >
         Mark all as read
       </Button>
