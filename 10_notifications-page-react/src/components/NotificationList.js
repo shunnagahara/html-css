@@ -11,7 +11,6 @@ export default function NotificationList({ notifications }) {
           actorName={notification.actorName}
           actorAvatar={notification.actorAvatar}
           action={notification.action}
-          actionType={notification.actionType}
           target={notification.target}
           timeAgo={notification.timeAgo}
           image={notification.image}

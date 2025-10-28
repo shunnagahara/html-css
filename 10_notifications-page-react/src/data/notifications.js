@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 export const notifications = [
   {
     action: 'reacted to your recent post',
-    actionType: 'post',
     actorAvatar: '/assets/images/avatar-mark-webber.webp',
     actorName: 'Mark Webber',
     id: uuidv4(),
@@ -16,7 +15,6 @@ export const notifications = [
   },
   {
     action: 'followed you',
-    actionType: 'post',
     actorAvatar: '/assets/images/avatar-angela-gray.webp',
     actorName: 'Angela Gray',
     id: uuidv4(),
@@ -29,7 +27,6 @@ export const notifications = [
   },
   {
     action: 'has joined your group',
-    actionType: 'group',
     actorAvatar: '/assets/images/avatar-jacob-thompson.webp',
     actorName: 'Jacob Thompson',
     id: uuidv4(),
@@ -42,7 +39,6 @@ export const notifications = [
   },
   {
     action: 'sent you a private message',
-    actionType: 'post',
     actorAvatar: '/assets/images/avatar-rizky-hasanuddin.webp',
     actorName: 'Rizky Hasanuddin',
     id: uuidv4(),
@@ -56,7 +52,6 @@ export const notifications = [
   },
   {
     action: 'commented on your picture',
-    actionType: 'post',
     actorAvatar: '/assets/images/avatar-kimberly-smith.webp',
     actorName: 'Kimberly Smith',
     id: uuidv4(),
@@ -69,7 +64,6 @@ export const notifications = [
   },
   {
     action: 'reacted to your recent post',
-    actionType: 'post',
     actorAvatar: '/assets/images/avatar-nathan-peterson.webp',
     actorName: 'Nathan Peterson',
     id: uuidv4(),
@@ -82,7 +76,6 @@ export const notifications = [
   },
   {
     action: 'left the group',
-    actionType: 'group',
     actorAvatar: '/assets/images/avatar-anna-kim.webp',
     actorName: 'Anna Kim',
     id: uuidv4(),

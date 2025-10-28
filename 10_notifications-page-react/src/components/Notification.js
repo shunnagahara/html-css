@@ -3,7 +3,6 @@ import { Box, Stack, Avatar, Typography } from '@mui/material';
 
 export default function Notification({
   action,
-  actionType,
   actorAvatar,
   actorName,
   image,
@@ -13,8 +12,6 @@ export default function Notification({
   target,
   timeAgo,
 }) {
-  const isGroupAction = actionType === 'group';
-
   return (
     <Stack
       component="article"
