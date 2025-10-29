@@ -61,6 +61,13 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-perfectionist": "^4.15.1",
     "eslint-plugin-prettier": "^5.5.4",
-    "prettier": "^3.6.2"
+    "msw": "^2.11.6",
+    "prettier": "^3.6.2",
+    "web-streams-polyfill": "^4.2.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
