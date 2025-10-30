@@ -53,7 +53,7 @@ export const Target = styled(Box)(({ theme }) => ({
   cursor: 'pointer',
 }));
 
-export const UnreadIndicator = styled(Box)(({ theme }) => ({
+export const UnreadIndicator = styled('span')(({ theme }) => ({
   display: 'inline-block',
   height: 8,
   width: 8,
