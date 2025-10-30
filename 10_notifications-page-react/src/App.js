@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import {
   ThemeProvider,
   CssBaseline,
@@ -14,53 +13,11 @@ import { theme } from './theme';
 import './App.css';
 import NotificationList from './components/NotificationList';
 import Header from './components/Header';
+import { useNotifications } from './hooks/useNotifications';
 
 function App() {
-  const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const fetchNotifications = async () => {
-      try {
-        const response = await fetch('/api/notifications');
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch notifications');
-        }
-
-        const data = await response.json();
-
-        if (isMounted) {
-          setItems(data.notifications ?? []);
-        }
-      } catch (err) {
-        if (isMounted) {
-          setError(err);
-        }
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
-    };
-
-    fetchNotifications();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  const unreadCount = items.filter(
-    (notification) => notification.isUnread
-  ).length;
-
-  const handleMarkAllAsRead = () => {
-    setItems((prev) => prev.map((n) => ({ ...n, isUnread: false })));
-  };
+  const { error, isLoading, markAllAsRead, notifications, unreadCount } =
+    useNotifications();
 
   return (
     <ThemeProvider theme={theme}>
@@ -115,9 +72,9 @@ function App() {
             <Stack spacing={3}>
               <Header
                 unreadCount={unreadCount}
-                onMarkAllAsRead={handleMarkAllAsRead}
+                onMarkAllAsRead={markAllAsRead}
               />
-              <NotificationList notifications={items} />
+              <NotificationList notifications={notifications} />
             </Stack>
           )}
         </Box>

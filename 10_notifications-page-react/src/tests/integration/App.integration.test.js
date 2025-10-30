@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../../App';
 import { notifications as fixtureNotifications } from '../../data/notifications';
@@ -58,9 +58,7 @@ describe('App integration', () => {
       name: /mark all as read/i,
     });
 
-    await act(async () => {
-      await userEvent.click(markAllButton);
-    });
+    userEvent.click(markAllButton);
 
     await waitFor(() => {
       const badge = screen.getByText((content, element) => {
